@@ -15,7 +15,7 @@ def process_receipts():
     for the receipt, and store it in our local variable receipts where the key
     is the id and the value is the points total.
 
-    Returns the receipt id along with a 200 status code or an error if the 
+    Returns: the receipt id along with a 200 status code or an error if the 
     receipt is invalid
     """
     receipt = request.get_json()
@@ -38,7 +38,7 @@ def get_points(id):
     It uses the id passed in and sends back the points total of the receipt,
     if it exists.
 
-    Returns the points total and a 200 code if the receipt is found, otherwise
+    Returns: the points total and a 200 code if the receipt is found, otherwise
     a 404 error.
     """
     #check to see if the id exists
