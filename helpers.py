@@ -76,14 +76,15 @@ def pts_for_date_time(purchase_date, purchase_time):
     """
     points = 0
     purchase_date = datetime.strptime(purchase_date, "%Y-%m-%d")
-    if purchase_date.day % 2 == 1:
+    if purchase_date.day % 2 == 1: #check odd date
         points += 6
 
     purchase_time = datetime.strptime(purchase_time, "%H:%M")
     beginning = datetime.strptime("14:00", "%H:%M")
     end = datetime.strptime("16:00", "%H:%M")
 
-    if beginning < purchase_time < end:
+    #instructions make it seem like both 2pm and 4pm are exclusive
+    if beginning < purchase_time < end: #check if between 2pm and 4pm exclusive
         points += 10
 
     return points

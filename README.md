@@ -1,3 +1,33 @@
+# Instructions
+This application can be ran two ways; through docker or directly. To run the application via docker use 
+```
+docker build -t receipt-processor .
+```
+then
+```
+docker run -p 5000:5000 receipt-processor
+``` 
+this will allow the service to be accessed at http://localhost:5000. 
+
+To run directly, install the dependencies with
+```
+pip install -r requirements.txt
+```
+and start the api with
+```
+python app.py
+```
+ 
+To run the test script, simply run python test_script.py while the docker container is running.
+ 
+# Explanations
+There are a few choices I made during the development cycle which can be justified.  
+For starters, I decided on using a slim version of python as this is a simple project  
+and I wanted to only use the packages I really needed, which helped reduce size.
+ 
+I chose unit tests to keep 
+
+
 # Receipt Processor
 
 Build a webservice that fulfils the documented API. The API is described below. A formal definition is provided 
