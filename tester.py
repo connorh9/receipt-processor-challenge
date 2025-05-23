@@ -5,10 +5,11 @@ from helpers import (
     pts_for_total,
     pts_for_amnt_items,
     pts_for_trimmed_items,
-    pts_for_date_time
+    pts_for_date_time,
+    calculate_points
 )
 import unittest
-from app import app, calculate_points
+from app import app
 
 class ReceiptProcessorTests(unittest.TestCase):
     def setUp(self):
@@ -16,7 +17,7 @@ class ReceiptProcessorTests(unittest.TestCase):
         self.app.testing = True
 
     def test_process_receipt_valid(self):
-        #Test a valid receipt and check status code and existence of an id
+        """Test a valid receipt"""
         receipt = {
             "retailer": "Target",
             "purchaseDate": "2022-01-01",
@@ -37,7 +38,7 @@ class ReceiptProcessorTests(unittest.TestCase):
         self.assertIn('id', data)
 
     def test_process_receipt_broken(self):
-        #Testing a broken receipt to ensure we get a 400 code
+        """Test a broken receipt to see if we get a 400 code"""
         receipt = {
             "retailer": "Target",
             "purchaseDate": "2022-01-01",
@@ -81,12 +82,14 @@ class ReceiptProcessorTests(unittest.TestCase):
         self.assertIn('points', data)
 
     def test_get_points_invalid(self):
+        """Check a non working uuid"""
         response = self.app.get(f'/receipts/invalid/points')
         self.assertEqual(response.status_code, 404)
         data = json.loads(response.data)
         self.assertIn('error', data)
 
     def test_points_calculation(self):
+        """Check summation of points for a receipt"""
         receipt = {
             "retailer": "Target",
             "purchaseDate": "2022-01-01",
