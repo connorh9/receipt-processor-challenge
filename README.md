@@ -31,8 +31,9 @@ I coded this project in Python using Flask due to more familiarity with those th
 
 # About Me
 I am a recent graduate from the University of Wisconsin - Madison with a Bachelors degree in Computer Science. I have a passion for solving real-world problems with the coding skills I've developed.   
-Currently, my main languages which I use are Python, JavaScript, and C. Many projects of mine have been developed in React or React Native using Expo. My preferred framework for backend applications has been Flask.   
-I am currently looking for a junior engineering role as a path to entry in the industry. Thank you.
+Currently, my main languages which I use are Python, JavaScript, and C. Many projects of mine have been developed in React or React Native using Expo.  
+My preferred framework for backend applications has been Flask.   
+I am currently looking for a junior engineering role as a path to entry in the industry. Thank you for taking the time to read, feel free to check out any other projects of mine.
 
 
 # Receipt Processor
