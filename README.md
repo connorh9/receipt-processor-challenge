@@ -1,5 +1,6 @@
 # Instructions
-This application can be ran two ways; through docker or directly. To run the application via docker use 
+This application can be ran two ways; through docker or directly.  
+### To run the application via docker use 
 ```
 docker build -t receipt-processor .
 ```
@@ -9,7 +10,7 @@ docker run -p 5000:5000 receipt-processor
 ``` 
 this will allow the service to be accessed at http://localhost:5000. 
 
-To run directly, install the dependencies with
+### To run directly, install the dependencies with
 ```
 pip install -r requirements.txt
 ```
@@ -18,14 +19,20 @@ and start the api with
 python app.py
 ```
  
-To run the test script, simply run python test_script.py while the docker container is running.
+To run the test script, simply run python test_script.py in bash while the docker container is running.
  
 # Explanations
 There are a few choices I made during the development cycle which can be justified.  
-For starters, I decided on using a slim version of python as this is a simple project  
-and I wanted to only use the packages I really needed, which helped reduce size.
+For starters, I decided on using a slim version of python as this is a simple project and I wanted to only use the packages I really needed, which helped reduce size.
  
-I chose unit tests to keep 
+I chose unit testing to aide in the organization and coverage of the testing of the program.
+
+I coded this project in Python using Flask due to more familiarity with those than Go. While I have some Go understanding, I am more comfortable with other languages.
+
+# About Me
+I am a recent graduate from the University of Wisconsin - Madison with a Bachelors degree in Computer Science. I have a passion for solving real-world problems with the coding skills I've developed.   
+Currently, my main languages which I use are Python, JavaScript, and C. Many projects of mine have been developed in React or React Native using Expo. My preferred framework for backend applications has been Flask.   
+I am currently looking for a junior engineering role as a path to entry in the industry. Thank you.
 
 
 # Receipt Processor
